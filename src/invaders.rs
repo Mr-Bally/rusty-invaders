@@ -49,8 +49,8 @@ impl Invaders {
                     downwards = true;
                 }
             } else {
-                let min_x = self.army.iter().map(|invader| invader.x).min().unwrap_or(0);
-                if min_x == NUM_COLS - 1 {
+                let max_x = self.army.iter().map(|invader| invader.x).max().unwrap_or(0);
+                if max_x == NUM_COLS - 1 {
                     self.direction = -1;
                     downwards = true
                 }
